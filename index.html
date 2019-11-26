@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Triangle tracker</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function triangleTracker(a, b, c) {
+            if(((a + b <= c || a + c <= b || b + c <= a)){
+                return('invalid triangle option');
+            }
+
+          else if (a == b && b == c) {
+                 return ('This is an equilateral triangle');
+                //  document.getElementById('l').innerHTML="This is an equilateral triangle";
+            } else if ((a == b && b != c) ||( a == c && c != b) || (b == c && c != a)) {
+                 return ('This is an isosceles triangle');
+                // document.getElementById('l').innerHTML="This is an isosceles triangle";
+            } else if ((a != b && b != c && a != c) && a + b > c || a + c > b || b + c > a) {
+                return ('this is an scalene trianle');
+                // document.getElementById('l').innerHTML="This is an scalene triangle";
+            } else if (
+                (Math.pow(a, 2) == Math.pow(b, 2) + Math.pow(c, 2) &&
+                Math.pow(b, 2) == Math.pow(a, 2) - Math.pow(c, 2) &&
+                Math.pow(c, 2) == Math.pow(a, 2) - Math.pow(b, 2) )||
+
+               ( Math.pow(b, 2) == Math.pow(a, 2) + Math.pow(c, 2) &&
+                Math.pow(a, 2) == Math.pow(b, 2) - Math.pow(c, 2) &&
+                Math.pow(c, 2) == Math.pow(b, 2) - Math.pow(a, 2) )||
+
+               ( Math.pow(c, 2) == Math.pow(a, 2) + Math.pow(b, 2) &&
+                Math.pow(b, 2) == Math.pow(c, 2) - Math.pow(a, 2) &&
+                Math.pow(a, 2) == Math.pow(c, 2) - Math.pow(b, 2))
+            ) {
+                return ('This is a right angle triangle');
+                // document.getElementById('l').innerHTML="This is a right angle triangle";
+            } else {
+                return (prompt('This is not a triangle'));
+                // document.getElementById('l').innerHTML="This is not a triangle";
+            }
+
+        }
+        // var a, b, c = prompt('please insert 3 numbers separated by a comma');
+        triangleTracker;
+        // a = prompt('Enter a number');
+        // b = prompt('Enter a number');
+        // c = prompt('Enter a number');
+
+        //    var l=prompt();
+    </script>
+
+
+
+
+
+
+
+
+    <!-- <input type="number" name="ben" id="ben" onkeypress="triangleTracker(ben.value)"><input type="submit">
+<p id="l">waiting</p> -->
+</body>
+
+</html>
