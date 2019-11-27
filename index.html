@@ -7,49 +7,46 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Triangle tracker</title>
 </head>
+<a href="./Triangle-tracker.html"></a>
 
 <body>
     <script type="text/javascript">
+        //bensons product..!
         function triangleTracker(a, b, c) {
-            if(((a + b <= c || a + c <= b || b + c <= a)){
-                return('invalid triangle option');
-            }
-
-          else if (a == b && b == c) {
-                 return ('This is an equilateral triangle');
-                //  document.getElementById('l').innerHTML="This is an equilateral triangle";
-            } else if ((a == b && b != c) ||( a == c && c != b) || (b == c && c != a)) {
-                 return ('This is an isosceles triangle');
-                // document.getElementById('l').innerHTML="This is an isosceles triangle";
-            } else if ((a != b && b != c && a != c) && a + b > c || a + c > b || b + c > a) {
-                return ('this is an scalene trianle');
-                // document.getElementById('l').innerHTML="This is an scalene triangle";
+            // var j = [a, b, c];
+            // j.sort();
+            if (a + b <= c || a + c <= b || b + c <= a) {
+                alert('invalid triangle option');
+            } else if (a == b && b == c) {
+                alert('This is an equilateral triangle');
+                //  document.write("This is an equilateral triangle");
+            } else if ((a == b && b != c) || (a == c && c != b) || (b == c && c != a)) {
+                alert('This is an isosceles triangle');
+                // document.write("This is an isosceles triangle");
             } else if (
-                (Math.pow(a, 2) == Math.pow(b, 2) + Math.pow(c, 2) &&
-                Math.pow(b, 2) == Math.pow(a, 2) - Math.pow(c, 2) &&
-                Math.pow(c, 2) == Math.pow(a, 2) - Math.pow(b, 2) )||
+                (Math.pow(a, 2) == Math.pow(b, 2) + Math.pow(c, 2)) ||
+                (Math.pow(b, 2) == Math.pow(a, 2) + Math.pow(c, 2)) ||
+                (Math.pow(c, 2) == Math.pow(a, 2) + Math.pow(b, 2)))
 
-               ( Math.pow(b, 2) == Math.pow(a, 2) + Math.pow(c, 2) &&
-                Math.pow(a, 2) == Math.pow(b, 2) - Math.pow(c, 2) &&
-                Math.pow(c, 2) == Math.pow(b, 2) - Math.pow(a, 2) )||
-
-               ( Math.pow(c, 2) == Math.pow(a, 2) + Math.pow(b, 2) &&
-                Math.pow(b, 2) == Math.pow(c, 2) - Math.pow(a, 2) &&
-                Math.pow(a, 2) == Math.pow(c, 2) - Math.pow(b, 2))
-            ) {
-                return ('This is a right angle triangle');
-                // document.getElementById('l').innerHTML="This is a right angle triangle";
+            {
+                alert('This is a right angle triangle');
+                // document.write("This is a right angle triangle");
+            } else if ((a != b && b != c && a != c) && a + b > c || a + c > b || b + c > a) {
+                alert('this is a scalene trianle');
+                // document.write("This is an scalene triangle");
             } else {
-                return (prompt('This is not a triangle'));
-                // document.getElementById('l').innerHTML="This is not a triangle";
+                alert('please input correct values and try again!!');
+                // document.write("This is not a triangle");
             }
 
         }
-        // var a, b, c = prompt('please insert 3 numbers separated by a comma');
-        triangleTracker;
-        // a = prompt('Enter a number');
-        // b = prompt('Enter a number');
-        // c = prompt('Enter a number');
+
+        // Get values from prompt
+        var number1 = parseFloat(prompt('input first side length'));
+        var number2 = parseFloat(prompt('input second side length'));
+        var number3 = parseFloat(prompt('input final side length'));
+        triangleTracker(number1, number2, number3);
+
 
         //    var l=prompt();
     </script>
@@ -62,7 +59,7 @@
 
 
     <!-- <input type="number" name="ben" id="ben" onkeypress="triangleTracker(ben.value)"><input type="submit">
-<p id="l">waiting</p> -->
+ <p id="l">waiting</p>  -->
 </body>
 
 </html>
