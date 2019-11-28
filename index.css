@@ -1,0 +1,16 @@
+input{
+    width: 70px;
+}
+.row{
+    display:inline-block;
+    margin: 2%;
+}
+.row .card{
+    width: 400px;
+    height: 400px;
+    margin: 4%;
+}
+.row .card img,p{
+    display: inline-block;
+    position: relative;
+}
