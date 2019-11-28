@@ -15,19 +15,14 @@
     <title>Triangle tracker</title>
 </head>
 <nav class="nav">
-        <img src="https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-            alt="ben">
-        <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="#">Services</a</li>
-            <li><a href="#">Testimonies</a></li>
-        </ul>
-    </nav>
-<header class="jumbotron">
-    <h1>TRIANGLE TRACKER </h1>
-    <p>Please feel free explore and test each triangle</p>
+    <img src="https://images.pexels.com/photos/1329296/pexels-photo-1329296.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        alt="logo">
+    <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#">Services</a</li> <li><a href="#">Testimonies</a></li>
+    </ul>
+</nav>
 
-</header>
 <script type="text/javascript">
     //bensons product..!
     function triangleTracker(a, b, c) {
@@ -71,28 +66,36 @@
     //    var l=prompt();
 </script>
 
-<body class="container">
+<body class="contain">
+    <header class="jumbotron">
+        <h1>TRIANGLE TRACKER </h1>
+        <p>Please feel free explore and test each triangle</p>
+
+    </header>
 
     <h1 class="card-header">Triangles</h1>
-    <div class="card-body">
-        <p>There are many different types of triangles:<br>
-            <ul>
-                <li>Equilateral triangle</li>
-                <li>Isosceles triangle</li>
-                <li>Scalene triangle</li>
-                <li>Right-angle triangle</li>
-            </ul><br>
-            most people oftenly forget that:<br>
-            <ul>
-                <li>An Equilateral triangle can be an Isosceles triangle but an Isosceles triangle cannot be
-                    Equilateral.</li>
-                <li>A Scalene triangle can be a Right-angle triangle and not every Right-angle triangle is scalene
-                    triangle</li>
-                <li>A right Right-angle triangle can be both Isosceles and scalene in different forms.</li>
-            </ul>
-        </p>
+    <div class="card-body ">
+        <tr class="row">
+            <p>There are many different types of triangles:<br>
+                <ul>
+                    <li>Equilateral triangle</li>
+                    <li>Isosceles triangle</li>
+                    <li>Scalene triangle</li>
+                    <li>Right-angle triangle</li>
+                </ul>
+            </p><br>
+            <p class="flot"> most people oftenly forget that:<br>
+                <ul>
+                    <li>An Equilateral triangle can be an Isosceles triangle but an Isosceles triangle cannot be
+                        Equilateral.</li>
+                    <li>A Scalene triangle can be a Right-angle triangle and not every Right-angle triangle is scalene
+                        triangle</li>
+                    <li>A right Right-angle triangle can be both Isosceles and scalene in different forms.</li>
+                </ul>
+            </p>
+        </tr>
+        <h2 class="card-header">Examples</h2>
         <div class="container table">
-            <h2 class="card-header">Examples</h2>
             <div class="row">
                 <div class="card">
                     <h3 class="card-header">Equilateral triangle</h3>
@@ -100,36 +103,22 @@
                         <img src="https://www.mathsisfun.com/geometry/images/triangle-equilateral.svg"
                             alt="Equilateral">
                         <p>This is a triangle that <br>all its sides are equal<br> together with its angles.</p>
+                        <div class="a"><p class="animate"></p></div> 
                     </div>
                     <div class="card-footer">
-                        <form action="" method="GET" id="all">
-                            <input type="text" name="ben" id="ben">
-                            <input type="text" name="juma" id="juma">
-                            <input type="text" name="chao" id="chao">
-                        </form>
-                        <button onclick="triangleTracker(
-                                        parseInt( document.getElementById('ben').value),
-                                        parseInt(document.getElementById('juma').value),
-                                        parseInt(document.getElementById('chao').value));">Check</button>
+
                     </div>
                 </div>
                 <div class="card">
                     <h2 class="card-header">Isosceles triangle</h2>
                     <div class="card-body">
                         <img src="https://www.mathsisfun.com/geometry/images/triangle-isosceles.svg" alt="Isosceles">
-                        <p>This is a type of triangle that<br>has only two of its sides  equal<br> not the third side.
+                        <p>This is a type of triangle that<br>has only two of its sides equal<br> not the third side.
                             </but><br></p>
+                            <div class="anim"><p class="animate"></p></div> 
                     </div>
                     <div class="card-footer">
-                        <form action="" method="GET" id="all">
-                            <input type="text" name="ben" id="ben">
-                            <input type="text" name="juma" id="juma">
-                            <input type="text" name="chao" id="chao">
-                        </form>
-                        <button onclick="triangleTracker(
-                                    parseInt( document.getElementById('ben').value),
-                                    parseInt(document.getElementById('juma').value),
-                                    parseInt(document.getElementById('chao').value));">Check</button>
+                        <!-- <h3>insert trial and confirmation values</h3> -->
                     </div>
 
                 </div>
@@ -141,17 +130,10 @@
                         <img src="https://www.mathsisfun.com/geometry/images/triangle-scalene.svg" alt="Scalene">
                         <p>This is a type of triangle that<br>none of its side is equal to the other<br>but its values
                             form a triangle.</p>
+                            <div class="anima"><p class="animate"></p></div> 
                     </div>
                     <div class="card-footer">
-                        <form action="" method="GET" id="all">
-                            <input type="text" name="ben" id="ben">
-                            <input type="text" name="juma" id="juma">
-                            <input type="text" name="chao" id="chao">
-                        </form>
-                        <button onclick="triangleTracker(
-                                            parseInt( document.getElementById('ben').value),
-                                            parseInt(document.getElementById('juma').value),
-                                            parseInt(document.getElementById('chao').value));">Check</button>
+                        <!-- <h3>insert trial and confirmation values</h3> -->
                     </div>
 
                 </div>
@@ -162,17 +144,11 @@
                         <p>This is a type of triangle that <br>has a right angle (90) and <br> can be either Isosceles
                             or scalene triangle.<br>It is only different in that the square of its larger<br> side is
                             equal to the sum of the square of the other<br> two remaining sides</p>
+                            <div class="animati"><p class="animate"></p></div> 
                     </div>
+                   
                     <div class="card-footer">
-                        <form action="" method="GET" id="all">
-                            <input type="text" name="ben" id="ben">
-                            <input type="text" name="juma" id="juma">
-                            <input type="text" name="chao" id="chao">
-                        </form>
-                        <button onclick="triangleTracker(
-                                        parseInt( document.getElementById('ben').value),
-                                        parseInt(document.getElementById('juma').value),
-                                        parseInt(document.getElementById('chao').value));">Check</button>
+                        <!-- <h3>insert trial and confirmation values</h3> -->
                     </div>
 
                 </div>
@@ -180,12 +156,26 @@
         </div>
 
     </div>
+    <h3 class="card-header">Validate all our statements</h3>
+    <form action="" method="GET" id="all">track a triangle
+            <input type="text" name="ben" id="ben" placeholder="Enter first side">
+            <input type="text" name="juma" id="juma" placeholder="Enter second side">
+            <input type="text" name="chao" id="chao" placeholder="Enter last side">
+        </form>
+        <div class="form">
+        <button onclick="triangleTracker(
+                            parseInt( document.getElementById('ben').value),
+                            parseInt(document.getElementById('juma').value),
+                            parseInt(document.getElementById('chao').value));">Check</button>
+                            </div>
 </body>
-<footer class="foot">
-        <h1>Contact us</h1>
-        <p><i class="fa fa-twitter"></i>@benson</p>
-        <p><i class="fa fa-facebook"></i>bjail7@gmail.com</p>
-        <p><i class="fa fa-whatsapp"></i>+99755686789</p>
-        <h2>Benson &copy;2019<h2p></h2>
+<footer class="footer">
+    <h1>Contact us</h1>
+    <p><i class="fa fa-twitter"></i>@benson</p>
+    <p><i class="fa fa-facebook"></i>bjail7@gmail.com</p>
+    <p><i class="fa fa-whatsapp"></i>+99755686789</p>
+    <h2>Benson &copy;2019<h2p>
+    </h2>
 </footer>
+
 </html>
