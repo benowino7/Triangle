@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/jpeg"
+        href="https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+    <link
+        href="https://fonts.googleapis.com/css?family=Abril+Fatface|Dancing+Script|Indie+Flower|Shadows+Into+Light&display=swap"
+        rel="stylesheet">
     <title>Triangle tracker</title>
 </head>
 <header class="jumbotron">
@@ -12,60 +20,163 @@
     <p>Please feel free explore and test each triangle</p>
 
 </header>
+<script type="text/javascript">
+    //bensons product..!
+    function triangleTracker(a, b, c) {
 
+        if (a + b <= c || a + c <= b || b + c <= a) {
+            alert('invalid triangle option');
+        } else if (a == b && b == c) {
+            alert('This is an equilateral triangle');
+            //  document.write("This is an equilateral triangle");
+        } else if ((a == b && b != c) || (a == c && c != b) || (b == c && c != a)) {
+            alert('This is an isosceles triangle');
+            // document.write("This is an isosceles triangle");
+        } else if (
+            (Math.pow(a, 2) == Math.pow(b, 2) + Math.pow(c, 2)) ||
+            (Math.pow(b, 2) == Math.pow(a, 2) + Math.pow(c, 2)) ||
+            (Math.pow(c, 2) == Math.pow(a, 2) + Math.pow(b, 2)))
 
-<body class="container">
-    <script type="text/javascript">
-        //bensons product..!
-        function triangleTracker(a, b, c) {
-            // var j = [a, b, c];
-            // j.sort();
-            if (a + b <= c || a + c <= b || b + c <= a) {
-                alert('invalid triangle option');
-            } else if (a == b && b == c) {
-                alert('This is an equilateral triangle');
-                //  document.write("This is an equilateral triangle");
-            } else if ((a == b && b != c) || (a == c && c != b) || (b == c && c != a)) {
-                alert('This is an isosceles triangle');
-                // document.write("This is an isosceles triangle");
-            } else if (
-                (Math.pow(a, 2) == Math.pow(b, 2) + Math.pow(c, 2)) ||
-                (Math.pow(b, 2) == Math.pow(a, 2) + Math.pow(c, 2)) ||
-                (Math.pow(c, 2) == Math.pow(a, 2) + Math.pow(b, 2)))
-
-            {
-                alert('This is a right angle triangle');
-                // document.write("This is a right angle triangle");
-            } else if ((a != b && b != c && a != c) && a + b > c || a + c > b || b + c > a) {
-                alert('this is a scalene trianle');
-                // document.write("This is an scalene triangle");
-            } else {
-                alert('please input correct values and try again!!');
-                // document.write("This is not a triangle");
-            }
-
+        {
+            alert('This is a right angle triangle');
+            // document.write("This is a right angle triangle");
+        } else if ((a != b && b != c && a != c) && a + b > c || a + c > b || b + c > a) {
+            alert('this is a scalene trianle');
+            // document.write("This is an scalene triangle");
+        } else {
+            alert('please input correct values and try again!!');
+            // document.write("This is not a triangle");
         }
 
-        // Get values from prompt
-        var number1 = parseFloat(prompt('input first side length'));
-        var number2 = parseFloat(prompt('input second side length'));
-        var number3 = parseFloat(prompt('input final side length'));
-        triangleTracker(number1, number2, number3);
+    }
+
+    // Get values from prompt
+    // var number1 = parseFloat(prompt('input first side length'));
+    // var number2 = parseFloat(prompt('input second side length'));
+    // var number3 = parseFloat(prompt('input final side length'));
+    triangleTracker(
+        parseFloat(document.getElementById('ben').value),
+        parseFloat(document.getElementById('juma').value),
+        parseFloat(document.getElementById('chao').value));
 
 
-        //    var l=prompt();
-    </script>
+    //    var l=prompt();
+</script>
 
+<body class="container">
 
+    <h1 class="card-header">Triangles</h1>
+    <div class="card-body">
+        <p>There are many different types of triangles:<br>
+            <ul>
+                <li>Equilateral triangle</li>
+                <li>Isosceles triangle</li>
+                <li>Scalene triangle</li>
+                <li>Right-angle triangle</li>
+            </ul><br>
+            most people oftenly forget that:<br>
+            <ul>
+                <li>An Equilateral triangle can be an Isosceles triangle but an Isosceles triangle cannot be
+                    Equilateral.</li>
+                <li>A Scalene triangle can be a Right-angle triangle and not every Right-angle triangle is scalene
+                    triangle</li>
+                <li>A right Right-angle triangle can be both Isosceles and scalene in different forms.</li>
+            </ul>
+        </p>
+        <div class="container table">
+            <h2 class="card-header">Examples</h2>
+            <div class="row">
+                <div class="card">
+                    <h3 class="card-header">Equilateral triangle</h3>
+                    <div class="card-body">
+                        <img src="https://www.mathsisfun.com/geometry/images/triangle-equilateral.svg"
+                            alt="Equilateral">
+                        <p>This is a triangle that <br>all its sides are equal<br> together with its angles.</p>
+                    </div>
+                    <div class="card-footer">
+                        <form action="" method="GET" id="all">
+                            <input type="text" name="ben" id="ben">
+                            <input type="text" name="juma" id="juma">
+                            <input type="text" name="chao" id="chao">
+                        </form>
+                        <button onclick="triangleTracker(
+                                        parseInt( document.getElementById('ben').value),
+                                        parseInt(document.getElementById('juma').value),
+                                        parseInt(document.getElementById('chao').value));">Check</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2 class="card-header">Isosceles triangle</h2>
+                    <div class="card-body">
+                        <img src="https://www.mathsisfun.com/geometry/images/triangle-isosceles.svg" alt="Isosceles">
+                        <p>This is a type of triangle that<br>has only two of its sides  equal<br> not the third side.
+                            </but><br></p>
+                    </div>
+                    <div class="card-footer">
+                        <form action="" method="GET" id="all">
+                            <input type="text" name="ben" id="ben">
+                            <input type="text" name="juma" id="juma">
+                            <input type="text" name="chao" id="chao">
+                        </form>
+                        <button onclick="triangleTracker(
+                                    parseInt( document.getElementById('ben').value),
+                                    parseInt(document.getElementById('juma').value),
+                                    parseInt(document.getElementById('chao').value));">Check</button>
+                    </div>
 
+                </div>
+            </div>
+            <div class="row">
+                <div class="card">
+                    <h2 class="card-header">Scalene triangle</h2>
+                    <div class="card-body">
+                        <img src="https://www.mathsisfun.com/geometry/images/triangle-scalene.svg" alt="Scalene">
+                        <p>This is a type of triangle that<br>none of its side is equal to the other<br>but its values
+                            form a triangle.</p>
+                    </div>
+                    <div class="card-footer">
+                        <form action="" method="GET" id="all">
+                            <input type="text" name="ben" id="ben">
+                            <input type="text" name="juma" id="juma">
+                            <input type="text" name="chao" id="chao">
+                        </form>
+                        <button onclick="triangleTracker(
+                                            parseInt( document.getElementById('ben').value),
+                                            parseInt(document.getElementById('juma').value),
+                                            parseInt(document.getElementById('chao').value));">Check</button>
+                    </div>
 
+                </div>
+                <div class="card">
+                    <h2 class="card-header">Right-angle triangle</h2>
+                    <div class="card-body">
+                        <img src="https://www.mathsisfun.com/geometry/images/triangle-right.svg" alt="Right-angle">
+                        <p>This is a type of triangle that <br>has a right angle (90) and <br> can be either Isosceles
+                            or scalene triangle.<br>It is only different in that the square of its larger<br> side is
+                            equal to the sum of the square of the other<br> two remaining sides</p>
+                    </div>
+                    <div class="card-footer">
+                        <form action="" method="GET" id="all">
+                            <input type="text" name="ben" id="ben">
+                            <input type="text" name="juma" id="juma">
+                            <input type="text" name="chao" id="chao">
+                        </form>
+                        <button onclick="triangleTracker(
+                                        parseInt( document.getElementById('ben').value),
+                                        parseInt(document.getElementById('juma').value),
+                                        parseInt(document.getElementById('chao').value));">Check</button>
+                    </div>
 
+                </div>
+            </div>
+        </div>
 
-
-
-    <!-- <input type="number" name="ben" id="ben" onkeypress="triangleTracker(ben.value)"><input type="submit">
- <p id="l">waiting</p>  -->
- <a href="./Triangle-tracker.html">Dive In</a>
+    </div>
 </body>
-
+<footer class="footer">
+        <h1>Contact us</h1>
+        <p><i class="fa fa-twitter"></i>@benson</p>
+        <p><i class="fa fa-facebook"></i>bjail7@gmail.com</p>
+        <p><i class="fa fa-whatsapp"></i>+99755686789</p>
+</footer>
 </html>
