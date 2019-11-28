@@ -23,47 +23,8 @@
     </ul>
 </nav>
 
-<script type="text/javascript">
+<script type="text/javascript" src="index.js">
     //bensons product..!
-    function triangleTracker(a, b, c) {
-
-        if (a + b <= c || a + c <= b || b + c <= a) {
-            alert('invalid triangle option');
-        } else if (a == b && b == c) {
-            alert('This is an equilateral triangle');
-            //  document.write("This is an equilateral triangle");
-        } else if ((a == b && b != c) || (a == c && c != b) || (b == c && c != a)) {
-            alert('This is an isosceles triangle');
-            // document.write("This is an isosceles triangle");
-        } else if (
-            (Math.pow(a, 2) == Math.pow(b, 2) + Math.pow(c, 2)) ||
-            (Math.pow(b, 2) == Math.pow(a, 2) + Math.pow(c, 2)) ||
-            (Math.pow(c, 2) == Math.pow(a, 2) + Math.pow(b, 2)))
-
-        {
-            alert('This is a right angle triangle');
-            // document.write("This is a right angle triangle");
-        } else if ((a != b && b != c && a != c) && a + b > c || a + c > b || b + c > a) {
-            alert('this is a scalene trianle');
-            // document.write("This is an scalene triangle");
-        } else {
-            alert('please input correct values and try again!!');
-            // document.write("This is not a triangle");
-        }
-
-    }
-
-    // Get values from prompt
-    // var number1 = parseFloat(prompt('input first side length'));
-    // var number2 = parseFloat(prompt('input second side length'));
-    // var number3 = parseFloat(prompt('input final side length'));
-    triangleTracker(
-        parseFloat(document.getElementById('ben').value),
-        parseFloat(document.getElementById('juma').value),
-        parseFloat(document.getElementById('chao').value));
-
-
-    //    var l=prompt();
 </script>
 
 <body class="contain">
@@ -75,13 +36,13 @@
 
     <h1 class="card-header">Triangles</h1>
     <div class="card-body ">
-        <tr class="row">
+        <div class="">
             <p>There are many different types of triangles:<br>
                 <ul>
-                    <li>Equilateral triangle</li>
-                    <li>Isosceles triangle</li>
-                    <li>Scalene triangle</li>
-                    <li>Right-angle triangle</li>
+                    <li class="bg-primary">Equilateral triangle</li>
+                    <li class="bg-info">Isosceles triangle</li>
+                    <li class="bg-primary">Scalene triangle</li>
+                    <li class="bg-info">Right-angle triangle</li>
                 </ul>
             </p><br>
             <p class="flot"> most people oftenly forget that:<br>
@@ -93,7 +54,7 @@
                     <li>A right Right-angle triangle can be both Isosceles and scalene in different forms.</li>
                 </ul>
             </p>
-        </tr>
+        </div>
         <h2 class="card-header">Examples</h2>
         <div class="container table">
             <div class="row">
@@ -102,11 +63,15 @@
                     <div class="card-body">
                         <img src="https://www.mathsisfun.com/geometry/images/triangle-equilateral.svg"
                             alt="Equilateral">
-                        <p>This is a triangle that <br>all its sides are equal<br> together with its angles.</p>
-                        <div class="a"><p class="animate"></p></div> 
+                        <p>This is a triangle that <br>all its sides are equal<br> together with its angles. No any
+                            other <br>triangle can be Equilateral.</p>
+
+                    </div>
+                    <div class="a">
+                        
                     </div>
                     <div class="card-footer">
-
+                            <p class="animate"></p>
                     </div>
                 </div>
                 <div class="card">
@@ -114,11 +79,16 @@
                     <div class="card-body">
                         <img src="https://www.mathsisfun.com/geometry/images/triangle-isosceles.svg" alt="Isosceles">
                         <p>This is a type of triangle that<br>has only two of its sides equal<br> not the third side.
+                            that means <br>that an Equelateral is also Isosceles
                             </but><br></p>
-                            <div class="anim"><p class="animate"></p></div> 
+
+                    </div>
+                    <div class="a">
+                        <p class="anim"></p>
                     </div>
                     <div class="card-footer">
                         <!-- <h3>insert trial and confirmation values</h3> -->
+
                     </div>
 
                 </div>
@@ -130,10 +100,13 @@
                         <img src="https://www.mathsisfun.com/geometry/images/triangle-scalene.svg" alt="Scalene">
                         <p>This is a type of triangle that<br>none of its side is equal to the other<br>but its values
                             form a triangle.</p>
-                            <div class="anima"><p class="animate"></p></div> 
+
                     </div>
                     <div class="card-footer">
                         <!-- <h3>insert trial and confirmation values</h3> -->
+                        <div class="a">
+                            <p class="anima"></p>
+                        </div>
                     </div>
 
                 </div>
@@ -144,11 +117,14 @@
                         <p>This is a type of triangle that <br>has a right angle (90) and <br> can be either Isosceles
                             or scalene triangle.<br>It is only different in that the square of its larger<br> side is
                             equal to the sum of the square of the other<br> two remaining sides</p>
-                            <div class="animati"><p class="animate"></p></div> 
+
                     </div>
-                   
+                    <div class="a">
+                        <p class="animati"></p>
+                    </div>
                     <div class="card-footer">
                         <!-- <h3>insert trial and confirmation values</h3> -->
+
                     </div>
 
                 </div>
@@ -156,18 +132,20 @@
         </div>
 
     </div>
+
     <h3 class="card-header">Validate all our statements</h3>
     <form action="" method="GET" id="all">track a triangle
-            <input type="text" name="ben" id="ben" placeholder="Enter first side">
-            <input type="text" name="juma" id="juma" placeholder="Enter second side">
-            <input type="text" name="chao" id="chao" placeholder="Enter last side">
-        </form>
-        <div class="form">
+        <input type="text" name="ben" id="ben" placeholder="Enter first side">
+        <input type="text" name="juma" id="juma" placeholder="Enter second side">
+        <input type="text" name="chao" id="chao" placeholder="Enter last side">
+    </form>
+    <div class="form">
         <button onclick="triangleTracker(
                             parseInt( document.getElementById('ben').value),
                             parseInt(document.getElementById('juma').value),
                             parseInt(document.getElementById('chao').value));">Check</button>
-                            </div>
+    </div>
+    <br><br>
 </body>
 <footer class="footer">
     <h1>Contact us</h1>

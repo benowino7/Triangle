@@ -2,12 +2,13 @@ nav {
     width: 100%;
     /* justify-content: space-around; */
     display: flex;
-    position: relative;
+    position: fixed;
     margin-top: 0%;
-    background-color:rgb(157, 213, 223);
+    background-color: rgb(157, 213, 223);
     color: #08838b;
 }
-nav img{
+
+nav img {
     width: 80px;
     height: 60px;
     border-radius: 30%;
@@ -44,58 +45,76 @@ nav>ul>li>a:hover {
     ;
     color: rgba(12, 12, 9, 0.7);
 }
-header{
+
+header {
     text-align: center;
 }
+
 /* body{
     background-color: lightblue;
 } */
+h2,
+h3 {
+    color: #08838b;
+    font-family: 'Abril Fatface', cursive;
+}
+
 tr .row {
-display: inline-block;
-margin: 2%;
+    display: inline-block;
+    margin: 2%;
 }
-input{
+
+input {
     width: 150px;
-    border: #08838b bold ;
+    border: #08838b solid 3px;
     border-radius: 2%;
+    background-color: rgb(157, 213, 223);
 }
-form,button{
+
+form,
+button {
     text-align: center;
 }
-.form{
+
+.form {
     text-align: center;
     margin: 2%;
 }
 
-.row{
-    display:inline-block;
+.row {
+    display: inline-block;
     margin: 2%;
     align-content: center;
+
 }
 
-.row .card{
+.row .card {
     width: 400px;
     height: 400px;
     margin: 4%;
-    background-color:rgb(157, 213, 223);
+    background-color: rgb(157, 213, 223);
 }
-.row .card img,p{
+
+.row .card img,
+p {
     display: inline-block;
     position: relative;
 }
 
-.footer{
+.footer {
     text-align: center;
     margin-left: 0%;
     margin-right: 0%;
-    background-color:rgb(157, 213, 223);
+    background-color: rgb(157, 213, 223);
 
 }
+
 i:hover {
     box-shadow: 0 0 10px rgba(17, 17, 17, 0.1), inset 0 0 1px rgba(100, 93, 93, 0.6);
     background: #08838b;
     color: rgba(11, 17, 15, 0.7);
 }
+
 i {
     padding: 10px;
     margin-left: 10%;
@@ -103,50 +122,96 @@ i {
     justify-content: space space-around;
     color: #08838b;
 }
-.card .footer,footer{
+.class{
+    background-image: url('https://images.pexels.com/photos/616650/pexels-photo-616650.png?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card .footer,
+footer {
     font-family: 'Abril Fatface', cursive;
     font-size: 22px;
 }
-.animate{
-    background-color: blue;
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    animation: rotate 3s 2s infinite alternate ease-in-out;
-    
-}
 
-.anim{
-    background-color: blue;
-    height: 80px;
-    width: 80px;
+.animate {
+    background-color: rgb(255, 0, 221);
+    height: 66px;
+    width: 66px;
     border-radius: 50%;
-    animation: rotate 3s 2s infinite alternate ease-in-out;
+    animation: rotate 3s 1s infinite alternate ease-in-out;
+    margin: 2%;
 
 }
-.anima{
-    background-color: blue;
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
-    animation: rotate 3s 2s infinite alternate ease-in-out;
-    
-}
-    .animati{
-        background-color: blue;
-        height: 80px;
-        width: 80px;
-        border-radius: 50%;
-        animation: rotate 3s 2s infinite alternate ease-in-out;
-    
-}
-/* .anima{
-    background-color:black;
-    height: 10px;
-    width: 3iv class="card-body">
-    <img src="https://www.mathsisfun.com/geometry/images/triangle-right.svg" alt="Right-angle">
- 00px;
-    animation: swing 3s 2s infinite alternate ease-in-out;
-    text-align: center; */
 
-@keyframes rotate {from{transform: translateY(2px)} to{transform: translateY(100px)}}
+.anim {
+    background-color: rgb(45, 212, 23);
+    height: 66px;
+    margin: 2%;
+    width: 66px;
+    border-radius: 50%;
+    animation: rotate1 3s 1s infinite alternate ease-in-out;
+
+}
+
+.anima {
+    background-color: rgb(0, 255, 200);
+    height: 66px;
+    width: 66px;
+    border-radius: 50%;
+    animation: rotate2 3s 1s infinite alternate ease-in-out;
+
+}
+
+.animati {
+    background-color: rgb(211, 208, 33);
+    height: 66px;
+    width: 66px;
+    border-radius: 50%;
+    animation: rotate3 3s 1s infinite alternate ease-in-out;
+
+}
+
+
+@keyframes rotate {
+    from {
+        transform: translateX(2px)
+    }
+
+    to {
+        transform: translateX(250px)
+    }
+}
+
+@keyframes rotate1 {
+    from {
+        transform: translateX(250px)
+    }
+
+    to {
+        transform: translateX(2px)
+    }
+}
+
+@keyframes rotate2 {
+    from {
+        transform: translateX(2px)
+    }
+
+    to {
+        transform: translateX(250px)
+    }
+}
+
+@keyframes rotate3 {
+    from {
+        transform: translateX(250px)
+    }
+
+    to {
+        transform: translateX(2px)
+    }
+}
+p{
+    font-family: 'Indie Flower', cursive;
+}
