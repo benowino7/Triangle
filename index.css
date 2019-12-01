@@ -48,6 +48,7 @@ nav>ul>li>a:hover {
 
 header {
     text-align: center;
+    /* margin-top: 10%; */
 }
 
 /* body{
@@ -57,6 +58,10 @@ h2,
 h3 {
     color: #08838b;
     font-family: 'Abril Fatface', cursive;
+    font-size: 32px;
+}
+h1{
+    margin-top: 5%;
 }
 
 tr .row {
@@ -122,7 +127,8 @@ i {
     justify-content: space space-around;
     color: #08838b;
 }
-.class{
+
+.class {
     background-image: url('https://images.pexels.com/photos/616650/pexels-photo-616650.png?auto=compress&cs=tinysrgb&dpr=1&w=500');
     background-repeat: no-repeat;
     background-size: cover;
@@ -212,6 +218,8 @@ footer {
         transform: translateX(2px)
     }
 }
-p{
+
+p {
     font-family: 'Indie Flower', cursive;
+    /* font-size: 18px; */
 }

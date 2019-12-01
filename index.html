@@ -19,7 +19,8 @@
         alt="logo">
     <ul>
         <li><a href="./index.html">Home</a></li>
-        <li><a href="#">Services</a</li> <li><a href="#">Testimonies</a></li>
+        <li><a href="#">Services</a</li> 
+        <li><a href="#form">Try it now</a></li>
     </ul>
 </nav>
 
@@ -36,13 +37,13 @@
 
     <h1 class="card-header">Triangles</h1>
     <div class="card-body ">
-        <div class="">
+        <div class="card-header bg-primary">
             <p>There are many different types of triangles:<br>
                 <ul>
-                    <li class="bg-primary">Equilateral triangle</li>
-                    <li class="bg-info">Isosceles triangle</li>
-                    <li class="bg-primary">Scalene triangle</li>
-                    <li class="bg-info">Right-angle triangle</li>
+                    <li>Equilateral triangle</li>
+                    <li>Isosceles triangle</li>
+                    <li>Scalene triangle</li>
+                    <li>Right-angle triangle</li>
                 </ul>
             </p><br>
             <p class="flot"> most people oftenly forget that:<br>
@@ -68,10 +69,10 @@
 
                     </div>
                     <div class="a">
-                        
+
                     </div>
                     <div class="card-footer">
-                            <p class="animate"></p>
+                        <p class="animate"></p>
                     </div>
                 </div>
                 <div class="card">
@@ -114,8 +115,7 @@
                     <h2 class="card-header">Right-angle triangle</h2>
                     <div class="card-body">
                         <img src="https://www.mathsisfun.com/geometry/images/triangle-right.svg" alt="Right-angle">
-                        <p>This is a type of triangle that <br>has a right angle (90) and <br> can be either Isosceles
-                            or scalene triangle.<br>It is only different in that the square of its larger<br> side is
+                        <p>This is a type of triangle that <br>has a right angle (90) and <br> It is only different in that the square of its larger<br> side is
                             equal to the sum of the square of the other<br> two remaining sides</p>
 
                     </div>
@@ -139,7 +139,7 @@
         <input type="text" name="juma" id="juma" placeholder="Enter second side">
         <input type="text" name="chao" id="chao" placeholder="Enter last side">
     </form>
-    <div class="form">
+    <div class="form" id="form">
         <button onclick="triangleTracker(
                             parseInt( document.getElementById('ben').value),
                             parseInt(document.getElementById('juma').value),
